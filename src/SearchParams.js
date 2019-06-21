@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 
 
 const SearchParams = () => {
+    // default state is Seattle WA - the first state
+    // this is a hook - 'use____' all hooks start with 'use'
     const [location, setLocation] = useState("Seattle, WA");
     
     return (
