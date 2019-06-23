@@ -7,7 +7,7 @@ const SearchParams = () => {
     // this is a hook - 'use____' all hooks start with 'use'
     const [location, setLocation] = useState("Seattle, WA");
     const [animal, setAnimal] = useState("dog");
-
+    const [breed, setBreed] = useState("");
     
     return (
         <div className="search-params">
@@ -31,8 +31,6 @@ const SearchParams = () => {
                         onChange={event => setAnimal(event.target.value)}
                         onBlur={event => setAnimal(event.target.value)}
                     >
-
-
                         <option>All</option>
                         {ANIMALS.map(animal => (
                             <option key={animal} value={animal}>
