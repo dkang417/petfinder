@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-
+ // generic dropdown component
 const useDropdown = (label, defaultState, options) => {
     const [state, setState] = useState(defaultState);
     const id = `use-dropdown-${label.replace(" ", "").toLowerCase()}`
+   
     const Dropdown = () => (
         <label htmlFor={id}>
-            {label} 
+            {label}
             <select
                 id={id}
                 value={state}
@@ -14,18 +15,18 @@ const useDropdown = (label, defaultState, options) => {
                 disabled={options.length === 0}
             >
                 
-                <option>All</option> 
-                {options.map(item) => (
-                <option key={item} value={item}>
-                    {item}
-                </option>
-
+                <option>All</option>
+                {options.map(item => (
+                    <option key={item} value={item}>
+                        {item}
+                    </option>
                 ))}
 
             </select>
-        </label>    
-    )
-    
-}
+        </label>
+    );
+    return [state, Dropdown, setState];
+
+};
 
 export default useDropdown;
