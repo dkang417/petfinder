@@ -21,9 +21,9 @@ const SearchParams = () => {
             location,
             breed,
             type: animal
-        })
+        });
 
-        setPets(animal || []);
+        setPets(animals || []);
     }
 
 
@@ -43,7 +43,7 @@ const SearchParams = () => {
         <div className="search-params">
         <h1>{location}</h1>    
             <form
-                onSubmit={ e => {
+                onSubmit={ (e) => {
                     e.preventDefault();
                     requestPets();
                 }}

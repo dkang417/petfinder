@@ -3,6 +3,7 @@ import Pet from './Pet';
 
 // one way data flow - going from parent to child
 const Results = ({ pets }) => {
+    
     return (
         <div className="search">
             {pets.length === 0 ? (<h1>No Pets found</h1>) : (
