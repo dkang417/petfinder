@@ -1,7 +1,11 @@
 import React from 'react';
 
-const Details = () => {
-    return <h1>Hi there!!!!! </h1>
+
+
+class Details extends React.Component{
+    render() {
+        
+    }
 }
 
 export default Details;
