@@ -30,6 +30,6 @@ const App = () => {
             
         </div>
     );
-};g
+};
 
 render(<App /> , document.getElementById("root"));
