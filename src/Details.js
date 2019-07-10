@@ -1,6 +1,8 @@
 import React from 'react';
 import pet from '@frontendmasters/pet';
 import Carousel from './Carousel'; 
+import ErrorBoundary from './errorBoundary';
+
 
 
 class Details extends React.Component {
@@ -13,7 +15,8 @@ class Details extends React.Component {
             };
         }
     
-        componentDidMount() {
+    componentDidMount() {
+     
             pet.animal(this.props.id)
                 .then(({ animal }) => {
                     this.setState({
@@ -38,6 +41,7 @@ class Details extends React.Component {
         
         
         return (
+         
             <div className="details">
                 <Carousel media={media}  />  
                 <div>
@@ -46,12 +50,19 @@ class Details extends React.Component {
                     <button>Adopt {name}</button>
                     <p>{description}</p>
                 </div>
-            </div>
+                </div>
+           
         )
     
         
     }
 }
 
-export default Details;
+export default function DetailsWithErrorBoundary(props) {
+    return (
+        <ErrorBoundary> 
+            <Details {...props}  />
+        </ErrorBoundary>
+    )
+};
 
