@@ -1,10 +1,13 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { render } from 'react-dom';
 import SearchParams from './SearchParams';
-import { Router, Link } from "@reach/router";
+import { Router, Link } from '@reach/router';
 import Details from './Details';
+import ThemeContext from './ThemeContext';
 
 const App = () => {
+    const themeHook = useState("pink");
+
     // return React.createElement(
     //     "div",
     //     {},
@@ -18,17 +21,18 @@ const App = () => {
 
     
     return (
-        <div>
-            <header>
-            <Link to="/">   Adopt me! </Link>    
-            </header>    
-         
-            <Router>
-                <SearchParams path="/" />
-                <Details path="/details/:id"/>
-            </Router>
+        <ThemeContext.Provider value={themeHook}>
+            <div>
+                <header>
+                <Link to="/">  Adopt me! </Link>    
+                </header>    
             
-        </div>
+                <Router>
+                    <SearchParams path="/" />
+                    <Details path="/details/:id"/>
+                </Router>
+            </div>
+        </ThemeContext.Provider>    
     );
 };
 
