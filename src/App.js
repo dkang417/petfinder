@@ -6,20 +6,7 @@ import Details from './Details';
 import ThemeContext from './ThemeContext';
 
 const App = () => {
-    const themeHook = useState("pink");
-
-    // return React.createElement(
-    //     "div",
-    //     {},
-    //     [
-    //         React.createElement("h1", {}, "Adopt Me!"),
-    //         React.createElement(Pet, { name: "luna", animal: "dog", breed: "poodle"}),    
-    //         React.createElement(Pet, { name: "Pepper", animal: "bird", breed: "parrot"}), 
-    //         React.createElement(Pet, { name: "Doink", animal: "cat", breed: "mix"}), 
-        
-    //     ]);
-
-    
+    const themeHook = useState("pink");    
     return (
         <ThemeContext.Provider value={themeHook}>
             <div>
@@ -35,5 +22,16 @@ const App = () => {
         </ThemeContext.Provider>    
     );
 };
+    // return React.createElement(
+    //     "div",
+    //     {},
+    //     [
+    //         React.createElement("h1", {}, "Adopt Me!"),
+    //         React.createElement(Pet, { name: "luna", animal: "dog", breed: "poodle"}),    
+    //         React.createElement(Pet, { name: "Pepper", animal: "bird", breed: "parrot"}), 
+    //         React.createElement(Pet, { name: "Doink", animal: "cat", breed: "mix"}), 
+        
+    //     ]);
+
 
 render(<App /> , document.getElementById("root"));
