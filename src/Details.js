@@ -69,10 +69,10 @@ class Details extends React.Component {
                     {
                         showModal ? (
                             <Modal>
-                                <h1>Would you like to adopt {name}?</h1>
+                                <h1>Hello, would you like to adopt {name}?</h1>
                                 <div className="buttons">
-                                    <button onClick={this.adopt} > Yes </button>
-                                    <button onClick={this.toggleModal} > NO I am a monster </button>
+                                    <button onClick={this.adopt} > Yes! </button>
+                                    <button onClick={this.toggleModal} > No, I am a monster! </button>
                                 </div>
                                     
                             </Modal>
