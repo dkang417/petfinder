@@ -1,13 +1,7 @@
 import React from "react";
 import { Link } from '@reach/router';
 
-
 export default function Pet({ name, animal, breed, media, location, id }) {
-    // return React.createElement("div", {}, [
-    //     React.createElement("h1", {}, name),
-    //     React.createElement("h2", {}, animal),
-    //     React.createElement("h2", {}, breed)
-    // ]);
 
     let hero = "http://placecorgi.com/300/300";
     if (media.length) {
@@ -25,3 +19,9 @@ export default function Pet({ name, animal, breed, media, location, id }) {
         </Link>
     )
 };
+
+   // return React.createElement("div", {}, [
+    //     React.createElement("h1", {}, name),
+    //     React.createElement("h2", {}, animal),
+    //     React.createElement("h2", {}, breed)
+    // ]);

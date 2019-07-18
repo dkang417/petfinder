@@ -6,7 +6,8 @@ import Details from './Details';
 import ThemeContext from './ThemeContext';
 
 const App = () => {
-    const themeHook = useState("pink");    
+    const themeHook = useState("pink");  
+    
     return (
         <ThemeContext.Provider value={themeHook}>
             <div>
@@ -22,6 +23,9 @@ const App = () => {
         </ThemeContext.Provider>    
     );
 };
+
+render(<App /> , document.getElementById("root"));
+
     // return React.createElement(
     //     "div",
     //     {},
@@ -32,6 +36,3 @@ const App = () => {
     //         React.createElement(Pet, { name: "Doink", animal: "cat", breed: "mix"}), 
         
     //     ]);
-
-
-render(<App /> , document.getElementById("root"));
