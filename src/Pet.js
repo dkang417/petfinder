@@ -7,6 +7,7 @@ export default function Pet({ name, animal, breed, media, location, id }) {
     if (media.length) {
         hero = media[0].small;
     }
+    // jsx 
     return (
         <Link to={`/details/${id}`} className="pet">
             <div className="image-container">
@@ -19,6 +20,9 @@ export default function Pet({ name, animal, breed, media, location, id }) {
         </Link>
     )
 };
+
+
+// writing javascript to mimic markup here: 
 
    // return React.createElement("div", {}, [
     //     React.createElement("h1", {}, name),

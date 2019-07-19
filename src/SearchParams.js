@@ -56,7 +56,7 @@ const SearchParams = () => {
                     id="location"
                     value={location}
                     placeholder="location"
-                    onChange={event => setLocation(event.target.value)}
+                    onChange={e => setLocation(e.target.value)}
                 />
                 </label>
 
