@@ -60,7 +60,7 @@ class Details extends React.Component {
                     <ThemeContext.Consumer>
                         {(themeHook) => (
                             <button onClick={this.toggleModal} style={{ backgroundColor: themeHook[0] }}>
-                                Adopt {name}
+                                Adopt {name} today. 
                             </button>
                         )}
                     </ThemeContext.Consumer>
@@ -72,7 +72,7 @@ class Details extends React.Component {
                                 <h1>Hello, would you like to adopt {name}?</h1>
                                 <div className="buttons">
                                     <button onClick={this.adopt} > Yes! </button>
-                                    <button onClick={this.toggleModal} > No, I am a monster! </button>
+                                    <button onClick={this.toggleModal} > No thank you. </button>
                                 </div>
                                     
                             </Modal>
