@@ -11,10 +11,11 @@ const SearchParams = () => {
     // this is a hook - 'use____' all hooks start with 'use'
     const [location, setLocation] = useState("Seattle, WA");
     const [breeds, setBreeds] = useState([]);
-    const [animal, AnimalDropdown] = useDropdown("Animal", "dog", ANIMALS);
-    const [breed, BreedDropdown, setBreed] = useDropdown("Breed", "", breeds);
     const [pets, setPets] = useState([]);
     const [theme, setTheme] = useContext(ThemeContext);
+    // custom hooks
+    const [animal, AnimalDropdown] = useDropdown("Animal", "dog", ANIMALS);
+    const [breed, BreedDropdown, setBreed] = useDropdown("Breed", "", breeds);
 
 
     // always returns a promise 

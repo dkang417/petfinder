@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
- // generic dropdown component
+
+
+// generic dropdown component - our custom hook
+
 const useDropdown = (label, defaultState, options) => {
     const [state, setState] = useState(defaultState);
     const id = `use-dropdown-${label.replace(" ", "").toLowerCase()}`
@@ -13,9 +16,8 @@ const useDropdown = (label, defaultState, options) => {
                 onChange={e => setState(e.target.value)}
                 onBlur={e => setState(e.target.value)}
                 disabled={options.length === 0}
-            >
-                
-                <option>All</option>
+            >   
+                <option>All Breeds</option>
                 {options.map(item => (
                     <option key={item} value={item}>
                         {item}
